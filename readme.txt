@@ -39,9 +39,6 @@ https://www.youtube.com/watch?v=K1ZnSLe-Rdk&ab_channel=IMXPRSOfficial
 
 == Frequently Asked Questions ==
 
-= A question that someone might have =
-
-= What about foo bar? =
 
 == Screenshots ==
 
