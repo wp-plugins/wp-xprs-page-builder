@@ -1,9 +1,9 @@
 === WP XPRS - Page Builder ===
 Contributors: imxprs
 Donate link:
-Tags: comments, spam
+Tags: builder, layout builder, page builder, landing page builder, landing pages, website builder, site builder, front-end builder, drag and drop builder, editor, front-end editor, visual composer, page layout
 Requires at least: 3.0.1
-Tested up to: 3.4
+Tested up to: 4.2.3
 Stable tag: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -15,17 +15,21 @@ XPRS is a visual page builder that allows you to easily create pages and layouts
 XPRS works with almost all the popular free wordpress themes and let's you design your own wordpress pages without writing or changing any piece of code.
 With XPRS you can build your website using pre-made blocks that are easily customized.
 
-What can you do with XPRS?
+= What can you do with XPRS? =
+
 With XPRS you can create blogs, ecommerce shops, landing pages, and portfolios.
 You can either integrate the XPRS content to replace the post's content, or you can replace the entire page - giving you full control of how your page would look like.
 
-Who is XPRS for?
+= Who is XPRS for? =
+
 XPRS is for anyone that wants to customize his wordpress theme to match his vision but doesn't know code.
 
-Can XPRS work for me?
+= Can XPRS work for me? =
+
 Yes! XPRS can work on almost every theme. We say 'almost' since every theme has it's own quirks and we can't really test it on all themes. We tested it on all the popular free themes and it looks great. If you run into compatibly issue with your theme please let us know and we will try to fix it in our next update.
 
-Why XPRS is better?
+= Why XPRS is better? =
+
 XPRS is totally free! Even ecommerce is free and can save you money on ecommerce plugins.
 XPRS is fully responsive so your site will look great on every device.
 XPRS is actually fun. We call the process 'Play & Build' - try it out and see what we mean.
