@@ -35,6 +35,7 @@ XPRS is fully responsive so your site will look great on every device.
 XPRS is actually fun. We call the process 'Play & Build' - try it out and see what we mean.
 
 https://www.youtube.com/watch?v=K1ZnSLe-Rdk&ab_channel=IMXPRSOfficial
+See it in action on our demo site: http://wpxprs.com/
 
 == Installation ==
 
