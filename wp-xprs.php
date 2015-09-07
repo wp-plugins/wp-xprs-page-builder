@@ -2,7 +2,7 @@
 /*
   Plugin Name: WP-XPRS
   Description: Visual editor WP-XPRS
-  Version: 1.0
+  Version: 1.1
   Author: imcreator
   Author URI: wpxprs.imcreator.com
  */
@@ -18,7 +18,9 @@ add_action('init', array($wp_xprs, 'init_action'));
 add_filter('post_row_actions', array($wp_xprs, 'add_row_action'), 10, 2);
 add_filter('page_row_actions', array($wp_xprs, 'add_row_action'), 10, 2);
 
-add_action('admin_menu', array($wp_xprs, 'menu')); // 
+add_action('admin_menu', array($wp_xprs, 'menu')); //
+
+add_action('admin_bar_menu', array($wp_xprs, 'admin_notices'));
 
 header('Access-Control-Allow-Origin: *.imxprs.com'); // for iframe!
 
@@ -69,6 +71,20 @@ class WP_XPRS {
             "# WPxprs: End Custom htaccess",
             "");
         return join("\n", $lines);
+    }
+
+    public function admin_notices(){
+        if (!in_array(wp_get_theme()->get_template(), $this->supported_themes)){
+            ?>
+
+	        <div class="error" style="border-color: #ffba00;">
+		        <p>
+			        This theme might not be fully compatible with WP XPRS. If you experience issues please contact <a href="mailto:wpxprs@imxprs.com" target="_top">wpxprs@imxprs.com</a> and ask to make your theme compatible.
+		        </p>
+	        </div>
+
+	        <?php
+        }
     }
 
     /**

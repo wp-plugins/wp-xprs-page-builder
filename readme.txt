@@ -58,6 +58,9 @@ See it in action on our demo site: http://wpxprs.com/
 = 1.0 =
 * First release
 
+= 1.1 =
+* Header mode
+
 == Upgrade Notice ==
 
 == Arbitrary section ==
