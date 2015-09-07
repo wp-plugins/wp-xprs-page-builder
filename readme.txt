@@ -50,6 +50,8 @@ See it in action on our demo site: http://wpxprs.com/
 1. The panel added to page/post editor.
 2. Page displays embedded content with sidebar
 3. Page displays embedded content without sidebar
+4. XPRS editor - homepage
+5. Page displays embedded content above post
 
 == Changelog ==
 
