@@ -13,4 +13,4 @@ twentyfourteen
 twentyfifteen
 vantage
 virtue
-zerif_lite
+zerif-lite
