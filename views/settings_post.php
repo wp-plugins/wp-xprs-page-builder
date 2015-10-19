@@ -4,6 +4,7 @@
 		<?php _e( 'How to insert content?:', $this->text_domain ); ?>
     </div>
     <select id="wp_xprs_insert_mode" name="wp_xprs_insert_mode" style="width: 200px;">
+		<option <?= selected( 5, $mode ) ?> value="5"><?php _e( 'Header mode', $this->text_domain ); ?></option>
         <option <?= selected( 1, $mode ) ?> value="1"><?php _e( 'Replace Content', $this->text_domain ); ?></option>
         <option <?= selected( 2, $mode ) ?> value="2"><?php _e( 'Replace Page', $this->text_domain ); ?></option>
         <option <?= selected( 3, $mode ) ?> value="3"><?php _e( 'Insert Content Before', $this->text_domain ); ?></option>
@@ -25,53 +26,56 @@
 		<?php _e( 'Insert Existing Content:', $this->text_domain ); ?>
     </div>
     <input id="wp_xprs_vbid" name="wp_xprs_vbid" style="width: 300px" type="text" value="<?php echo esc_attr( $vbid ); ?>" placeholder="<?php _e( 'Insert here your vbid: vbid-XXXX-XXXX-XXXX', $this->text_domain ); ?>"/>
+	<label style="display: block;"><?php _e( 'Check for VBID code in the URL of your website while in the editor', $this->text_domain ) ?></label>
 </div>
 
 <script>
-	function open_tab( url ) {
-		var win = window.open( url, '_blank' );
-		win.focus();
-	}
 
-	function show_checkboxes() {
-		if ( jQuery( '#wp_xprs_insert_mode' ).val() === '1' )
-			jQuery( '.wp_xprs_label' ).show();
-		else
-			jQuery( '.wp_xprs_label' ).hide();
-	}
+    function open_tab( url ) {
+        var edit_url = "<?php echo $edit_url ?>";
+        var win = window.open( edit_url + '&iframe_url=' + url, '_blank' );
+        win.focus();
+    }
 
-	function vbid() {
-		function s4() {
-			return Math.floor( ( 1 + Math.random() ) * 0x10000 )
-				.toString( 16 )
-				.substring( 1 );
-		}
-		return 'vbid-' + s4() + '-' + s4() + '-' + s4();
-	}
+    function show_checkboxes() {
+        if ( jQuery( '#wp_xprs_insert_mode' ).val() === '1' )
+            jQuery( '.wp_xprs_label' ).show();
+        else
+            jQuery( '.wp_xprs_label' ).hide();
+    }
 
-	jQuery( function( ) {
-		show_checkboxes(); //to hide if it's necessary
+    function vbid() {
+        function s4() {
+            return Math.floor( ( 1 + Math.random() ) * 0x10000 )
+                .toString( 16 )
+                .substring( 1 );
+        }
+        return 'vbid-' + s4() + '-' + s4() + '-' + s4();
+    }
 
-		jQuery( '#wp_xprs_insert_mode' ).change( function() {
-			show_checkboxes();
-		} );
+    jQuery( function ( ) {
+        show_checkboxes(); //to hide if it's necessary
 
-		jQuery( '#wp_xprs_edit_content' ).click( function() {
-			open_tab( 'http://imxprs.com/dual/' + jQuery( '#wp_xprs_vbid' ).val() );
-			return false;
-		} );
-		jQuery( '#wp_xprs_create_content' ).click( function( )
-		{
-			var code = vbid();
-			var mode = jQuery( '#wp_xprs_insert_mode' ).val();
-			jQuery( '#wp_xprs_vbid' ).val( code );
-			jQuery( '#wp_xprs_vbid' ).trigger( 'change' );
-			open_tab( 'https://www.imxprs.com/wpxprs?vbid=' + code + '&mode=' + mode );
-			return false;
-		} );
-		jQuery( '#wp_xprs_vbid' ).change( function() {
-			jQuery( '#wp_xprs_edit_content' ).css( 'display', jQuery( this ).val().length ? 'inline-block' : 'none' );
-		} );
-		jQuery( '#wp_xprs_vbid' ).trigger( 'change' );
-	} );
+        jQuery( '#wp_xprs_insert_mode' ).change( function () {
+            show_checkboxes();
+        } );
+
+        jQuery( '#wp_xprs_edit_content' ).click( function () {
+            open_tab( 'http://imxprs.com/dual/' + jQuery( '#wp_xprs_vbid' ).val() );
+            return false;
+        } );
+        jQuery( '#wp_xprs_create_content' ).click( function ( )
+        {
+            var code = vbid();
+            var mode = jQuery( '#wp_xprs_insert_mode' ).val();
+            jQuery( '#wp_xprs_vbid' ).val( code );
+            jQuery( '#wp_xprs_vbid' ).trigger( 'change' );
+            open_tab( 'http://www.imxprs.com/wpxprs?vbid=' + code + '&mode=' + mode );
+            return false;
+        } );
+        jQuery( '#wp_xprs_vbid' ).change( function () {
+            jQuery( '#wp_xprs_edit_content' ).css( 'display', jQuery( this ).val().length ? 'inline-block' : 'none' );
+        } );
+        jQuery( '#wp_xprs_vbid' ).trigger( 'change' );
+    } );
 </script>
