@@ -2,7 +2,7 @@
 /*
   Plugin Name: WP-XPRS
   Description: Visual editor WP-XPRS
-  Version: 1.1
+  Version: 1.1.1
   Author: imcreator
   Author URI: wpxprs.imcreator.com
  */
