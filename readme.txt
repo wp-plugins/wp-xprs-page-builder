@@ -62,5 +62,3 @@ See it in action on our demo site: http://wpxprs.com/
 * Header mode
 
 == Upgrade Notice ==
-
-== Arbitrary section ==
