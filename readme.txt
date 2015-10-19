@@ -3,7 +3,7 @@ Contributors: imxprs
 Donate link:
 Tags: builder, layout builder, page builder, landing page builder, landing pages, website builder, site builder, front-end builder, drag and drop builder, editor, front-end editor, visual composer, page layout, wix, weebly, squarespace, visual composer, beaver, live composer, aqua page builder, velocity age, awesome builder, motopress, content editor, wysiwyg, layerswp, layers
 Requires at least: 3.0.1
-Tested up to: 4.2.3
+Tested up to: 4.3.1
 Stable tag: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
